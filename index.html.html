@@ -12,16 +12,23 @@ html{scroll-behavior:smooth}
 body{font-family:'Inter',system-ui,sans-serif;background:#fff;color:#1a1a1a;line-height:1.6}
 a{text-decoration:none;color:inherit}
 nav{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 3rem;border-bottom:1px solid #f0f0f0;background:#fff;position:sticky;top:0;z-index:100}
-.logo{font-size:22px;font-weight:800;color:#6C47FF;letter-spacing:-0.5px}
-.logo span{color:#1a1a1a}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-bubble{position:relative;width:40px;height:42px;flex-shrink:0}
+.logo-rect{width:40px;height:34px;border-radius:10px;background:#6C47FF;display:flex;align-items:center;justify-content:center}
+.logo-c{font-size:19px;font-weight:900;color:#fff}
+.logo-tail{width:0;height:0;border-left:7px solid transparent;border-top:9px solid #6C47FF;margin-left:8px}
+.logo-dot-o{position:absolute;top:-4px;right:-4px;width:14px;height:14px;border-radius:50%;background:#fff;border:1.5px solid #f0f0f0}
+.logo-dot-i{position:absolute;top:1px;right:1px;width:8px;height:8px;border-radius:50%;background:#6C47FF}
+.logo-name{font-size:17px;font-weight:800;color:#0f0f0f;letter-spacing:-0.3px}
+.logo-name span{color:#6C47FF}
 .nav-links{display:flex;gap:2rem;align-items:center}
 .nav-links a{font-size:14px;color:#555;font-weight:500;transition:color 0.2s}
 .nav-links a:hover{color:#6C47FF}
 .btn{background:#6C47FF;color:#fff;padding:10px 22px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;border:none;transition:background 0.2s;display:inline-block}
 .btn:hover{background:#5535e0}
-.btn-outline{background:#fff;color:#6C47FF;border:1.5px solid #6C47FF;padding:12px 28px;border-radius:10px;font-size:15px;font-weight:600;cursor:pointer;transition:all 0.2s;display:inline-block}
+.btn-outline{background:#fff;color:#6C47FF;border:1.5px solid #6C47FF;padding:12px 28px;border-radius:10px;font-size:15px;font-weight:600;display:inline-block;transition:all 0.2s}
 .btn-outline:hover{background:#f5f0ff}
-.lang-btn{font-size:13px;color:#888;cursor:pointer;padding:6px 14px;border:1px solid #e0e0e0;border-radius:6px;background:#fff;transition:all 0.2s;font-weight:600}
+.lang-btn{font-size:13px;color:#888;cursor:pointer;padding:6px 14px;border:1px solid #e0e0e0;border-radius:6px;background:#fff;font-weight:600;transition:all 0.2s}
 .lang-btn:hover{border-color:#6C47FF;color:#6C47FF}
 .hero{text-align:center;padding:7rem 2rem 5rem;background:#faf8ff}
 .hero-badge{display:inline-flex;align-items:center;gap:6px;background:#f0ebff;color:#6C47FF;font-size:12px;font-weight:600;padding:6px 16px;border-radius:20px;margin-bottom:1.8rem}
@@ -67,17 +74,21 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:1.2rem
 .sector{background:#faf8ff;border:1px solid #ece8ff;border-radius:12px;padding:1.4rem 1rem;text-align:center}
 .sector-icon{font-size:30px;margin-bottom:0.6rem}
 .sector p{font-size:13px;font-weight:600;color:#333}
-.pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-top:2.5rem}
-.plan{background:#fff;border:1px solid #e0e0e0;border-radius:16px;padding:2rem}
+.pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-top:2.5rem;max-width:760px;margin-left:auto;margin-right:auto}
+.plan{background:#fff;border:1px solid #e0e0e0;border-radius:20px;padding:2.5rem}
 .plan.featured{border:2px solid #6C47FF}
 .plan-badge{display:inline-block;background:#f0ebff;color:#6C47FF;font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:1rem}
-.plan h3{font-size:20px;font-weight:800;color:#0f0f0f;margin-bottom:0.3rem}
-.plan-price{font-size:34px;font-weight:800;color:#6C47FF;margin:1rem 0 0.3rem;letter-spacing:-1px}
-.plan-price span{font-size:15px;font-weight:500;color:#888}
-.plan-monthly{font-size:13px;color:#888;margin-bottom:1.5rem}
-.plan-divider{border:none;border-top:1px solid #f0f0f0;margin:1.2rem 0}
-.plan-feature{font-size:13.5px;color:#444;padding:5px 0;display:flex;gap:10px;align-items:flex-start}
-.check{color:#6C47FF;font-weight:700;flex-shrink:0}
+.plan h3{font-size:22px;font-weight:800;color:#0f0f0f;margin-bottom:0.3rem}
+.plan-desc{font-size:13px;color:#888;margin-bottom:1.2rem}
+.plan-price{font-size:42px;font-weight:800;color:#6C47FF;letter-spacing:-1.5px;line-height:1}
+.plan-price span{font-size:16px;font-weight:500;color:#888}
+.plan-setup{font-size:13px;color:#aaa;margin:6px 0 1.5rem}
+.plan-divider{border:none;border-top:1px solid #f0f0f0;margin:1.4rem 0}
+.plan-feature{font-size:14px;color:#444;padding:6px 0;display:flex;gap:10px;align-items:flex-start;line-height:1.4}
+.check{color:#6C47FF;font-weight:700;flex-shrink:0;font-size:15px}
+.plan .btn{width:100%;text-align:center;padding:14px;margin-top:1.8rem;font-size:15px;border-radius:10px}
+.plan.featured .btn{background:#6C47FF}
+.plan:not(.featured) .btn{background:#0f0f0f}
 .testimonials-bg{background:#faf8ff}
 .testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
 .testimonial{background:#fff;border-radius:14px;border:1px solid #ece8ff;padding:1.8rem}
@@ -89,33 +100,66 @@ nav{display:flex;justify-content:space-between;align-items:center;padding:1.2rem
 .faq-item{border-bottom:1px solid #f0f0f0;padding:1.5rem 0}
 .faq-q{font-size:15px;font-weight:700;color:#0f0f0f;margin-bottom:0.7rem}
 .faq-a{font-size:14px;color:#666;line-height:1.75}
+.contact-section{background:#faf8ff;padding:5rem 2rem}
+.contact-inner{max-width:700px;margin:0 auto;text-align:center}
+.contact-title{font-size:clamp(1.8rem,3.5vw,2.4rem);font-weight:800;color:#0f0f0f;margin-bottom:1rem;letter-spacing:-0.8px;line-height:1.2}
+.contact-lead{font-size:1rem;color:#666;line-height:1.8;margin-bottom:0}
+.contact-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.2rem;margin-top:2.5rem}
+.contact-card{background:#fff;border:1px solid #ece8ff;border-radius:16px;padding:1.8rem 1.5rem;display:flex;flex-direction:column;align-items:center;gap:0.8rem;transition:transform 0.2s,border-color 0.2s}
+.contact-card:hover{transform:translateY(-3px);border-color:#6C47FF}
+.contact-icon{width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:26px}
+.contact-icon.wa{background:#E7F7EE}
+.contact-icon.ig{background:#FFF0F5}
+.contact-icon.em{background:#F0EBFF}
+.contact-label{font-size:14px;font-weight:700;color:#0f0f0f}
+.contact-handle{font-size:12px;color:#888}
 .cta-section{background:#6C47FF;padding:6rem 2rem;text-align:center}
 .cta-section h2{font-size:clamp(2rem,4.5vw,3rem);font-weight:800;color:#fff;margin-bottom:1.2rem;letter-spacing:-1px;line-height:1.2}
-.cta-section p{color:rgba(255,255,255,0.85);font-size:1.05rem;margin-bottom:2.5rem;max-width:500px;margin-left:auto;margin-right:auto}
-.btn-white{background:#fff;color:#6C47FF;padding:16px 36px;border-radius:10px;font-size:16px;font-weight:700;cursor:pointer;border:none;display:inline-block}
+.cta-section p{color:rgba(255,255,255,0.85);font-size:1.05rem;margin-bottom:2.5rem;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.7}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-white{background:#fff;color:#6C47FF;padding:16px 36px;border-radius:10px;font-size:16px;font-weight:700;display:inline-block;transition:all 0.2s}
+.btn-white:hover{background:#f5f0ff}
+.btn-wa{background:#25D366;color:#fff;padding:16px 36px;border-radius:10px;font-size:16px;font-weight:700;display:inline-block;transition:all 0.2s}
+.btn-wa:hover{background:#1fb959}
 footer{background:#0f0f0f;color:#888;padding:3rem 2rem}
 .footer-inner{max-width:1000px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem}
-.footer-logo{font-size:22px;font-weight:800;color:#fff}
+.footer-logo-wrap{display:flex;align-items:center;gap:10px}
+.fl-bubble{position:relative;width:36px;height:38px;flex-shrink:0}
+.fl-rect{width:36px;height:30px;border-radius:9px;background:#6C47FF;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:900;color:#fff}
+.fl-tail{width:0;height:0;border-left:6px solid transparent;border-top:8px solid #6C47FF;margin-left:7px}
+.fl-dot-o{position:absolute;top:-3px;right:-3px;width:12px;height:12px;border-radius:50%;background:#1a1a1a;border:1.5px solid #333}
+.fl-dot-i{position:absolute;top:1px;right:1px;width:6px;height:6px;border-radius:50%;background:#6C47FF}
+.footer-logo-name{font-size:16px;font-weight:800;color:#fff}
 .footer-links{display:flex;gap:1.5rem;flex-wrap:wrap}
-.footer-links a{font-size:13px;color:#888}
-.footer-copy{font-size:13px;color:#555;margin-top:2rem;text-align:center;max-width:1000px;margin-left:auto;margin-right:auto}
-@media(max-width:768px){nav{padding:1rem 1.5rem}.nav-links{display:none}.section{padding:4rem 1.5rem}}
+.footer-links a{font-size:13px;color:#888;transition:color 0.2s}
+.footer-links a:hover{color:#fff}
+.footer-social{display:flex;gap:0.8rem}
+.footer-social a{width:36px;height:36px;border-radius:8px;background:#1a1a1a;border:1px solid #333;display:flex;align-items:center;justify-content:center;font-size:18px;transition:border-color 0.2s}
+.footer-social a:hover{border-color:#6C47FF}
+.footer-copy{font-size:13px;color:#444;margin-top:2rem;text-align:center;max-width:1000px;margin-left:auto;margin-right:auto}
+@media(max-width:768px){nav{padding:1rem 1.5rem}.nav-links{display:none}.section{padding:4rem 1.5rem}.hero{padding:4rem 1.5rem 3rem}.pricing{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 
 <nav>
-  <div class="logo">Charl<span>ia</span></div>
+  <div class="logo">
+    <div class="logo-bubble">
+      <div class="logo-rect"><span class="logo-c">C</span></div>
+      <div class="logo-dot-o"><div class="logo-dot-i"></div></div>
+      <div class="logo-tail"></div>
+    </div>
+    <span class="logo-name">Charlia — <span>Agentes de IA</span></span>
+  </div>
   <div class="nav-links">
     <a href="#como" data-i="nav-como">Cómo funciona</a>
     <a href="#sectores" data-i="nav-sectores">Sectores</a>
     <a href="#precios" data-i="nav-precios">Precios</a>
-    <a href="#faq" data-i="nav-faq">FAQ</a>
     <a href="#contacto" data-i="nav-contacto">Contacto</a>
   </div>
   <div style="display:flex;gap:10px;align-items:center">
     <button class="lang-btn" id="langBtn">EN</button>
-    <a href="#contacto" class="btn" data-i="nav-demo">Solicitar demo</a>
+    <a href="https://wa.me/34684747082" class="btn" data-i="nav-demo">Solicitar demo</a>
   </div>
 </nav>
 
@@ -124,7 +168,7 @@ footer{background:#0f0f0f;color:#888;padding:3rem 2rem}
   <h1 data-i="hero-h1">Tu negocio atendiendo<br>clientes <span>24 horas</span><br>sin esfuerzo</h1>
   <p class="hero-sub" data-i="hero-sub">Charlia crea asistentes de inteligencia artificial que responden consultas, agendan citas y cierran ventas — de forma automática, en cualquier idioma.</p>
   <div class="hero-btns">
-    <a href="#contacto" class="btn" style="padding:14px 32px;font-size:16px" data-i="hero-btn1">Ver demo gratuita</a>
+    <a href="https://wa.me/34684747082" class="btn" style="padding:14px 32px;font-size:16px" data-i="hero-btn1">Ver demo gratuita</a>
     <a href="#precios" class="btn-outline" data-i="hero-btn2">Ver precios</a>
   </div>
   <div class="hero-stats">
@@ -138,13 +182,13 @@ footer{background:#0f0f0f;color:#888;padding:3rem 2rem}
       <div class="chat-avatar">C</div>
       <div>
         <div class="chat-name" data-i="chat-name">Charlia — Clínica Estética Demo</div>
-        <div class="chat-status"><div class="online-dot"></div> <span data-i="chat-status">En línea ahora</span></div>
+        <div class="chat-status"><div class="online-dot"></div><span data-i="chat-status">En línea ahora</span></div>
       </div>
     </div>
     <div class="chat-body">
       <div class="msg msg-user" data-i="msg1">Hola, ¿cuánto cuesta el botox?</div>
-      <div class="msg msg-bot" data-i="msg2">¡Hola! El botox está desde 200€ 😊 Tenemos una promoción de consulta inicial gratuita para nuevos pacientes. ¿Te gustaría reservar?</div>
-      <div class="msg msg-user" data-i="msg3">Sí, me interesa el jueves por la tarde</div>
+      <div class="msg msg-bot" data-i="msg2">¡Hola! El botox está desde 200€ 😊 Tenemos consulta inicial gratuita. ¿Te gustaría reservar?</div>
+      <div class="msg msg-user" data-i="msg3">Sí, me interesa el jueves</div>
       <div class="typing"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
     </div>
   </div>
@@ -169,12 +213,12 @@ footer{background:#0f0f0f;color:#888;padding:3rem 2rem}
     <h2 data-i="sec2-h2">Todo lo que necesita<br>un negocio moderno</h2>
     <p class="lead" data-i="sec2-lead">Un único agente que cubre toda la atención al cliente de forma automática.</p>
     <div class="services">
-      <div class="service-card"><div class="service-icon">💬</div><h3 data-i="sv1-h">Atención 24/7</h3><p data-i="sv1-p">Responde consultas en cualquier momento del día, incluso festivos y fines de semana. Nunca más una consulta sin respuesta.</p></div>
-      <div class="service-card"><div class="service-icon">📅</div><h3 data-i="sv2-h">Agenda automática</h3><p data-i="sv2-p">El cliente elige su cita directamente desde el chat. Sin llamadas, sin esperas, sin errores de doble reserva.</p></div>
-      <div class="service-card"><div class="service-icon">🔔</div><h3 data-i="sv3-h">Recordatorios automáticos</h3><p data-i="sv3-p">Envía recordatorios por WhatsApp 12h antes de la cita. Las cancelaciones se reducen hasta un 40%.</p></div>
-      <div class="service-card"><div class="service-icon">🌍</div><h3 data-i="sv4-h">Multiidioma</h3><p data-i="sv4-p">Detecta el idioma del cliente y responde en español, inglés, alemán, francés o el que necesites. Ideal para zonas turísticas.</p></div>
-      <div class="service-card"><div class="service-icon">🛒</div><h3 data-i="sv5-h">Cierre de ventas</h3><p data-i="sv5-p">Presenta productos, resuelve objeciones y guía al cliente hasta la compra o reserva. Tu mejor vendedor, sin descanso.</p></div>
-      <div class="service-card"><div class="service-icon">👤</div><h3 data-i="sv6-h">Personalidad humana</h3><p data-i="sv6-p">Tu agente tiene nombre, tono y estilo propio. Los clientes sienten que hablan con una persona, no con un robot.</p></div>
+      <div class="service-card"><div class="service-icon">💬</div><h3 data-i="sv1-h">Atención 24/7</h3><p data-i="sv1-p">Responde consultas en cualquier momento del día, incluso festivos y fines de semana.</p></div>
+      <div class="service-card"><div class="service-icon">📅</div><h3 data-i="sv2-h">Agenda automática</h3><p data-i="sv2-p">El cliente elige su cita directamente desde el chat. Sin llamadas, sin esperas.</p></div>
+      <div class="service-card"><div class="service-icon">🔔</div><h3 data-i="sv3-h">Recordatorios automáticos</h3><p data-i="sv3-p">Envía recordatorios por WhatsApp 12h antes. Las cancelaciones bajan hasta un 40%.</p></div>
+      <div class="service-card"><div class="service-icon">🌍</div><h3 data-i="sv4-h">Multiidioma</h3><p data-i="sv4-p">Detecta el idioma del cliente y responde en español, inglés, alemán o el que necesites.</p></div>
+      <div class="service-card"><div class="service-icon">🛒</div><h3 data-i="sv5-h">Cierre de ventas</h3><p data-i="sv5-p">Presenta productos, resuelve objeciones y guía al cliente hasta la compra o reserva.</p></div>
+      <div class="service-card"><div class="service-icon">👤</div><h3 data-i="sv6-h">Personalidad humana</h3><p data-i="sv6-p">Tu agente tiene nombre, tono y estilo propio. Los clientes sienten que hablan con una persona.</p></div>
     </div>
   </div>
 </section>
@@ -203,9 +247,9 @@ footer{background:#0f0f0f;color:#888;padding:3rem 2rem}
     <h2 data-i="sec4-h2">Lo que dicen<br>nuestros clientes</h2>
     <p class="lead" data-i="sec4-lead">Negocios reales que ya trabajan con Charlia.</p>
     <div class="testimonials">
-      <div class="testimonial"><div class="stars">★★★★★</div><blockquote data-i="t1">"Desde que tenemos el agente de Charlia, no perdemos ninguna consulta fuera de horario. Las citas se llenan solas y el equipo puede centrarse en atender."</blockquote><div class="t-author">María González</div><div class="t-role" data-i="t1-role">Directora, Clínica Estética Marbella</div></div>
-      <div class="testimonial"><div class="stars">★★★★★</div><blockquote data-i="t2">"Nuestros clientes internacionales ahora pueden reservar mesa en inglés y alemán. Ha sido un cambio enorme para el negocio. Lo recomiendo al 100%."</blockquote><div class="t-author">Carlos Martínez</div><div class="t-role" data-i="t2-role">Propietario, Restaurante La Brasa</div></div>
-      <div class="testimonial"><div class="stars">★★★★★</div><blockquote data-i="t3">"Las cancelaciones bajaron un 40% desde que el agente manda los recordatorios automáticos. Una inversión que se paga sola en el primer mes."</blockquote><div class="t-author">Ana Ruiz</div><div class="t-role" data-i="t3-role">Gerente, Centro de Belleza Alma</div></div>
+      <div class="testimonial"><div class="stars">★★★★★</div><blockquote data-i="t1">"Desde que tenemos el agente de Charlia, no perdemos ninguna consulta fuera de horario. Las citas se llenan solas."</blockquote><div class="t-author">María González</div><div class="t-role" data-i="t1-role">Directora, Clínica Estética Marbella</div></div>
+      <div class="testimonial"><div class="stars">★★★★★</div><blockquote data-i="t2">"Nuestros clientes internacionales reservan en inglés y alemán. Ha sido un cambio enorme para el negocio."</blockquote><div class="t-author">Carlos Martínez</div><div class="t-role" data-i="t2-role">Propietario, Restaurante La Brasa</div></div>
+      <div class="testimonial"><div class="stars">★★★★★</div><blockquote data-i="t3">"Las cancelaciones bajaron un 40%. Una inversión que se paga sola en el primer mes."</blockquote><div class="t-author">Ana Ruiz</div><div class="t-role" data-i="t3-role">Gerente, Centro de Belleza Alma</div></div>
     </div>
   </div>
 </section>
@@ -213,39 +257,41 @@ footer{background:#0f0f0f;color:#888;padding:3rem 2rem}
 <section class="section" id="precios">
   <div class="section-inner">
     <div class="section-label" data-i="sec5-label">Precios</div>
-    <h2 data-i="sec5-h2">Planes para cada<br>tipo de negocio</h2>
-    <p class="lead" data-i="sec5-lead">Sin sorpresas. Sin letra pequeña. Cancela cuando quieras.</p>
+    <h2 data-i="sec5-h2">Dos planes para<br>crecer sin límites</h2>
+    <p class="lead" data-i="sec5-lead">Sin permanencia. Sin sorpresas. Cancela cuando quieras.</p>
     <div class="pricing">
       <div class="plan">
-        <h3>Básico</h3><div class="plan-price">297€ <span>setup</span></div><div class="plan-monthly">+ 49€/mes</div>
+        <h3 data-i="plan1-name">Profesional</h3>
+        <p class="plan-desc" data-i="plan1-desc">Para negocios que quieren automatizar y crecer</p>
+        <div class="plan-price">399€ <span data-i="plan1-per">/mes</span></div>
+        <p class="plan-setup" data-i="plan1-setup">+ 497€ setup único al inicio</p>
         <hr class="plan-divider">
-        <div class="plan-feature"><span class="check">✓</span> Agente IA personalizado</div>
-        <div class="plan-feature"><span class="check">✓</span> Hasta 3 servicios</div>
-        <div class="plan-feature"><span class="check">✓</span> Agenda automática</div>
-        <div class="plan-feature"><span class="check">✓</span> Recordatorio por email</div>
-        <div class="plan-feature"><span class="check">✓</span> 1 idioma</div>
-        <a href="#contacto" class="btn" style="display:block;text-align:center;margin-top:1.5rem;padding:12px" data-i="plan1-btn">Empezar con Básico</a>
+        <div class="plan-feature"><span class="check">✓</span><span data-i="pf1-1">Agente IA personalizado con tu marca</span></div>
+        <div class="plan-feature"><span class="check">✓</span><span data-i="pf1-2">Servicios y productos ilimitados</span></div>
+        <div class="plan-feature"><span class="check">✓</span><span data-i="pf1-3">Agenda automática de citas</span></div>
+        <div class="plan-feature"><span class="check">✓</span><span data-i="pf1-4">Recordatorios por WhatsApp y email</span></div>
+        <div class="plan-feature"><span class="check">✓</span><span data-i="pf1-5">Hasta 3 idiomas</span></div>
+        <div class="plan-feature"><span class="check">✓</span><span data-i="pf1-6">Personalidad humana avanzada</span></div>
+        <div class="plan-feature"><span class="check">✓</span><span data-i="pf1-7">Informe mensual de consultas</span></div>
+        <div class="plan-feature"><span class="check">✓</span><span data-i="pf1-8">Soporte por WhatsApp</span></div>
+        <a href="https://wa.me/34684747082" class="btn" data-i="plan1-btn">Empezar ahora</a>
       </div>
       <div class="plan featured">
-        <div class="plan-badge">Más popular</div>
-        <h3>Profesional</h3><div class="plan-price">497€ <span>setup</span></div><div class="plan-monthly">+ 89€/mes</div>
+        <div class="plan-badge" data-i="plan2-badge">Más completo</div>
+        <h3 data-i="plan2-name">Premium</h3>
+        <p class="plan-desc" data-i="plan2-desc">Para negocios que quieren la solución completa</p>
+        <div class="plan-price">599€ <span data-i="plan2-per">/mes</span></div>
+        <p class="plan-setup" data-i="plan2-setup">+ 897€ setup único al inicio</p>
         <hr class="plan-divider">
-        <div class="plan-feature"><span class="check">✓</span> Todo lo del Básico</div>
-        <div class="plan-feature"><span class="check">✓</span> Servicios ilimitados</div>
-        <div class="plan-feature"><span class="check">✓</span> Multiidioma (hasta 3)</div>
-        <div class="plan-feature"><span class="check">✓</span> Recordatorio WhatsApp</div>
-        <div class="plan-feature"><span class="check">✓</span> Informe mensual</div>
-        <a href="#contacto" class="btn" style="display:block;text-align:center;margin-top:1.5rem;padding:12px" data-i="plan2-btn">Empezar con Profesional</a>
-      </div>
-      <div class="plan">
-        <h3>Premium</h3><div class="plan-price">897€ <span>setup</span></div><div class="plan-monthly">+ 149€/mes</div>
-        <hr class="plan-divider">
-        <div class="plan-feature"><span class="check">✓</span> Todo lo del Profesional</div>
-        <div class="plan-feature"><span class="check">✓</span> Integración en tu web</div>
-        <div class="plan-feature"><span class="check">✓</span> 2 agentes distintos</div>
-        <div class="plan-feature"><span class="check">✓</span> Idiomas ilimitados</div>
-        <div class="plan-feature"><span class="check">✓</span> Reunión mensual</div>
-        <a href="#contacto" class="btn" style="display:block;text-align:center;margin-top:1.5rem;padding:12px" data-i="plan3-btn">Empezar con Premium</a>
+        <div class="plan-feature"><span class="check">✓</span><span data-i="pf2-1">Todo lo del plan Profesional</span></div>
+        <div class="plan-feature"><span class="check">✓</span><span data-i="pf2-2">Integración en tu página web</span></div>
+        <div class="plan-feature"><span class="check">✓</span><span data-i="pf2-3">2 agentes distintos configurados</span></div>
+        <div class="plan-feature"><span class="check">✓</span><span data-i="pf2-4">Idiomas ilimitados</span></div>
+        <div class="plan-feature"><span class="check">✓</span><span data-i="pf2-5">Integración con Instagram DMs</span></div>
+        <div class="plan-feature"><span class="check">✓</span><span data-i="pf2-6">CRM básico de clientes</span></div>
+        <div class="plan-feature"><span class="check">✓</span><span data-i="pf2-7">Reunión mensual de seguimiento</span></div>
+        <div class="plan-feature"><span class="check">✓</span><span data-i="pf2-8">Prioridad en soporte 24h</span></div>
+        <a href="https://wa.me/34684747082" class="btn" data-i="plan2-btn">Empezar ahora</a>
       </div>
     </div>
   </div>
@@ -257,136 +303,82 @@ footer{background:#0f0f0f;color:#888;padding:3rem 2rem}
     <h2 data-i="sec6-h2">Todo lo que necesitas<br>saber</h2>
     <p class="lead" data-i="sec6-lead">¿Tienes dudas? Aquí respondemos las más comunes.</p>
     <div class="faq">
-      <div class="faq-item"><div class="faq-q" data-i="faq1-q">¿Necesito tener conocimientos técnicos para usar Charlia?</div><div class="faq-a" data-i="faq1-a">No. Nosotros nos encargamos de toda la configuración técnica. Tú solo nos dices cómo es tu negocio y nosotros lo hacemos todo.</div></div>
-      <div class="faq-item"><div class="faq-q" data-i="faq2-q">¿Cuánto tiempo tarda en estar listo mi agente?</div><div class="faq-a" data-i="faq2-a">En menos de 48 horas desde que nos confirmas los datos de tu negocio, tienes el agente listo para usar.</div></div>
-      <div class="faq-item"><div class="faq-q" data-i="faq3-q">¿El agente reemplaza a mi equipo?</div><div class="faq-a" data-i="faq3-a">No, lo complementa. El agente se encarga de las consultas repetitivas y la gestión de citas, para que tu equipo pueda centrarse en atender mejor a los clientes.</div></div>
-      <div class="faq-item"><div class="faq-q" data-i="faq4-q">¿Puedo cambiar la información del agente cuando quiera?</div><div class="faq-a" data-i="faq4-a">Sí. Si cambias precios, añades servicios o modificas horarios, nos lo dices y lo actualizamos en menos de 24 horas.</div></div>
-      <div class="faq-item"><div class="faq-q" data-i="faq5-q">¿Qué pasa si quiero cancelar?</div><div class="faq-a" data-i="faq5-a">Puedes cancelar el mantenimiento mensual cuando quieras, sin permanencia ni penalizaciones.</div></div>
+      <div class="faq-item"><div class="faq-q" data-i="faq1-q">¿Necesito conocimientos técnicos?</div><div class="faq-a" data-i="faq1-a">No. Nosotros nos encargamos de todo. Tú solo nos dices cómo es tu negocio y lo hacemos todo en menos de 48 horas.</div></div>
+      <div class="faq-item"><div class="faq-q" data-i="faq2-q">¿Cuánto tarda en estar listo?</div><div class="faq-a" data-i="faq2-a">En menos de 48 horas desde que confirmas los datos de tu negocio, tu agente está listo y funcionando.</div></div>
+      <div class="faq-item"><div class="faq-q" data-i="faq3-q">¿El agente reemplaza a mi equipo?</div><div class="faq-a" data-i="faq3-a">No, lo complementa. Se encarga de las consultas repetitivas para que tu equipo se centre en atender mejor.</div></div>
+      <div class="faq-item"><div class="faq-q" data-i="faq4-q">¿Puedo cambiar la información cuando quiera?</div><div class="faq-a" data-i="faq4-a">Sí. Si cambias precios, servicios u horarios, nos lo dices y lo actualizamos en menos de 24 horas.</div></div>
+      <div class="faq-item"><div class="faq-q" data-i="faq5-q">¿Hay permanencia?</div><div class="faq-a" data-i="faq5-a">No. Puedes cancelar el plan mensual cuando quieras, sin penalizaciones ni compromisos.</div></div>
     </div>
   </div>
 </section>
 
-<section class="cta-section" id="contacto">
+<section class="contact-section" id="contacto">
+  <div class="contact-inner">
+    <div class="section-label" style="text-align:center" data-i="sec7-label">Contacto</div>
+    <h2 class="contact-title" data-i="sec7-h2">Hablemos sobre<br>tu negocio</h2>
+    <p class="contact-lead" data-i="sec7-p">Escríbenos por WhatsApp o Instagram y te hacemos una demo personalizada en menos de 24 horas. Sin compromiso.</p>
+    <div class="contact-cards">
+      <a href="https://wa.me/34684747082" class="contact-card">
+        <div class="contact-icon wa">💬</div>
+        <span class="contact-label" data-i="contact-wa">WhatsApp Business</span>
+        <span class="contact-handle">+34 684 747 082</span>
+      </a>
+      <a href="https://instagram.com/charlia.ai" class="contact-card">
+        <div class="contact-icon ig">📸</div>
+        <span class="contact-label" data-i="contact-ig">Instagram</span>
+        <span class="contact-handle">@charlia.ai</span>
+      </a>
+      <a href="mailto:carlosmatiascalvo@gmail.com" class="contact-card">
+        <div class="contact-icon em">✉️</div>
+        <span class="contact-label" data-i="contact-em">Email</span>
+        <span class="contact-handle">carlosmatiascalvo@gmail.com</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
   <h2 data-i="cta-h2">¿Listo para que tu negocio<br>trabaje solo?</h2>
-  <p data-i="cta-p">Solicita una demo gratuita y ve cómo funciona un agente adaptado a tu sector en menos de 24 horas. Sin compromiso.</p>
-  <a href="mailto:carlosmatiascalvo@gmail.com?subject=Demo%20Charlia" class="btn-white" data-i="cta-btn">Solicitar demo gratuita</a>
+  <p data-i="cta-p">Solicita una demo gratuita y ve cómo funciona un agente adaptado a tu negocio en menos de 24 horas.</p>
+  <div class="cta-btns">
+    <a href="https://wa.me/34684747082" class="btn-wa" data-i="cta-btn-wa">💬 Escribir por WhatsApp</a>
+    <a href="mailto:carlosmatiascalvo@gmail.com" class="btn-white" data-i="cta-btn-email">Solicitar demo gratuita</a>
+  </div>
 </section>
 
 <footer>
   <div class="footer-inner">
-    <div class="footer-logo">Charlia</div>
+    <div class="footer-logo-wrap">
+      <div class="fl-bubble">
+        <div class="fl-rect">C</div>
+        <div class="fl-dot-o"><div class="fl-dot-i"></div></div>
+        <div class="fl-tail"></div>
+      </div>
+      <span class="footer-logo-name">Charlia — Agentes de IA</span>
+    </div>
     <div class="footer-links">
       <a href="#como" data-i="footer-link1">Cómo funciona</a>
       <a href="#sectores" data-i="footer-link2">Sectores</a>
       <a href="#precios" data-i="footer-link3">Precios</a>
       <a href="#faq" data-i="footer-link4">FAQ</a>
-      <a href="mailto:carlosmatiascalvo@gmail.com" data-i="footer-link5">Contacto</a>
+      <a href="#contacto" data-i="footer-link5">Contacto</a>
+    </div>
+    <div class="footer-social">
+      <a href="https://wa.me/34684747082" title="WhatsApp">💬</a>
+      <a href="https://instagram.com/charlia.ai" title="Instagram">📸</a>
     </div>
   </div>
-  <div class="footer-copy" data-i="footer-copy">© 2025 Charlia · Agentes de IA para negocios · Marbella, España · carlosmatiascalvo@gmail.com</div>
+  <div class="footer-copy" data-i="footer-copy">© 2025 Charlia — Agentes de IA · Marbella, España · carlosmatiascalvo@gmail.com</div>
 </footer>
 
 <script>
-const T = {
-  es: {
-    "nav-como":"Cómo funciona","nav-sectores":"Sectores","nav-precios":"Precios","nav-faq":"FAQ","nav-contacto":"Contacto","nav-demo":"Solicitar demo",
-    "hero-badge":"✦ Agentes de IA para negocios",
-    "hero-h1":"Tu negocio atendiendo<br>clientes <span style='color:#6C47FF'>24 horas</span><br>sin esfuerzo",
-    "hero-sub":"Charlia crea asistentes de inteligencia artificial que responden consultas, agendan citas y cierran ventas — de forma automática, en cualquier idioma.",
-    "hero-btn1":"Ver demo gratuita","hero-btn2":"Ver precios",
-    "stat1":"Atención sin parar","stat2":"Menos cancelaciones","stat3":"Idiomas disponibles","stat4":"Para estar en marcha",
-    "chat-name":"Charlia — Clínica Estética Demo","chat-status":"En línea ahora",
-    "msg1":"Hola, ¿cuánto cuesta el botox?",
-    "msg2":"¡Hola! El botox está desde 200€ 😊 Tenemos una promoción de consulta inicial gratuita para nuevos pacientes. ¿Te gustaría reservar?",
-    "msg3":"Sí, me interesa el jueves por la tarde",
-    "sec1-label":"Cómo funciona","sec1-h2":"En 3 pasos tu negocio<br>trabaja solo","sec1-lead":"Sin complicaciones técnicas. Nosotros lo configuramos todo y tú solo recibes los clientes.",
-    "step1-h":"Cuéntanos tu negocio","step1-p":"Nos explicas tus servicios, precios y horarios. Con eso creamos un agente totalmente personalizado con el nombre y estilo de tu empresa.",
-    "step2-h":"Configuramos tu agente","step2-p":"En menos de 48 horas tienes tu asistente listo, probado y conectado a tu agenda. Tú solo tienes que aprobarlo.",
-    "step3-h":"Tú solo atiendes","step3-p":"El agente responde, agenda y confirma. Tú recibes los clientes listos para ser atendidos, sin perder ninguna consulta.",
-    "sec2-label":"Qué hace tu agente","sec2-h2":"Todo lo que necesita<br>un negocio moderno","sec2-lead":"Un único agente que cubre toda la atención al cliente de forma automática.",
-    "sv1-h":"Atención 24/7","sv1-p":"Responde consultas en cualquier momento del día, incluso festivos y fines de semana. Nunca más una consulta sin respuesta.",
-    "sv2-h":"Agenda automática","sv2-p":"El cliente elige su cita directamente desde el chat. Sin llamadas, sin esperas, sin errores de doble reserva.",
-    "sv3-h":"Recordatorios automáticos","sv3-p":"Envía recordatorios por WhatsApp 12h antes de la cita. Las cancelaciones se reducen hasta un 40%.",
-    "sv4-h":"Multiidioma","sv4-p":"Detecta el idioma del cliente y responde en español, inglés, alemán, francés o el que necesites. Ideal para zonas turísticas.",
-    "sv5-h":"Cierre de ventas","sv5-p":"Presenta productos, resuelve objeciones y guía al cliente hasta la compra o reserva. Tu mejor vendedor, sin descanso.",
-    "sv6-h":"Personalidad humana","sv6-p":"Tu agente tiene nombre, tono y estilo propio. Los clientes sienten que hablan con una persona, no con un robot.",
-    "sec3-label":"Sectores","sec3-h2":"Para cualquier tipo<br>de negocio","sec3-lead":"Adaptamos cada agente a las necesidades específicas de tu sector.",
-    "sec4-label":"Testimonios","sec4-h2":"Lo que dicen<br>nuestros clientes","sec4-lead":"Negocios reales que ya trabajan con Charlia.",
-    "t1":"\"Desde que tenemos el agente de Charlia, no perdemos ninguna consulta fuera de horario. Las citas se llenan solas y el equipo puede centrarse en atender.\"",
-    "t1-role":"Directora, Clínica Estética Marbella",
-    "t2":"\"Nuestros clientes internacionales ahora pueden reservar mesa en inglés y alemán. Ha sido un cambio enorme para el negocio. Lo recomiendo al 100%.\"",
-    "t2-role":"Propietario, Restaurante La Brasa",
-    "t3":"\"Las cancelaciones bajaron un 40% desde que el agente manda los recordatorios automáticos. Una inversión que se paga sola en el primer mes.\"",
-    "t3-role":"Gerente, Centro de Belleza Alma",
-    "sec5-label":"Precios","sec5-h2":"Planes para cada<br>tipo de negocio","sec5-lead":"Sin sorpresas. Sin letra pequeña. Cancela cuando quieras.",
-    "plan1-btn":"Empezar con Básico","plan2-btn":"Empezar con Profesional","plan3-btn":"Empezar con Premium",
-    "sec6-label":"Preguntas frecuentes","sec6-h2":"Todo lo que necesitas<br>saber","sec6-lead":"¿Tienes dudas? Aquí respondemos las más comunes.",
-    "faq1-q":"¿Necesito tener conocimientos técnicos para usar Charlia?","faq1-a":"No. Nosotros nos encargamos de toda la configuración técnica. Tú solo nos dices cómo es tu negocio y nosotros lo hacemos todo.",
-    "faq2-q":"¿Cuánto tiempo tarda en estar listo mi agente?","faq2-a":"En menos de 48 horas desde que nos confirmas los datos de tu negocio, tienes el agente listo para usar.",
-    "faq3-q":"¿El agente reemplaza a mi equipo?","faq3-a":"No, lo complementa. El agente se encarga de las consultas repetitivas y la gestión de citas, para que tu equipo pueda centrarse en atender mejor a los clientes.",
-    "faq4-q":"¿Puedo cambiar la información del agente cuando quiera?","faq4-a":"Sí. Si cambias precios, añades servicios o modificas horarios, nos lo dices y lo actualizamos en menos de 24 horas.",
-    "faq5-q":"¿Qué pasa si quiero cancelar?","faq5-a":"Puedes cancelar el mantenimiento mensual cuando quieras, sin permanencia ni penalizaciones.",
-    "cta-h2":"¿Listo para que tu negocio<br>trabaje solo?","cta-p":"Solicita una demo gratuita y ve cómo funciona un agente adaptado a tu sector en menos de 24 horas. Sin compromiso.","cta-btn":"Solicitar demo gratuita",
-    "footer-link1":"Cómo funciona","footer-link2":"Sectores","footer-link3":"Precios","footer-link4":"FAQ","footer-link5":"Contacto",
-    "footer-copy":"© 2025 Charlia · Agentes de IA para negocios · Marbella, España · carlosmatiascalvo@gmail.com"
-  },
-  en: {
-    "nav-como":"How it works","nav-sectores":"Industries","nav-precios":"Pricing","nav-faq":"FAQ","nav-contacto":"Contact","nav-demo":"Get a demo",
-    "hero-badge":"✦ AI Agents for businesses",
-    "hero-h1":"Your business serving<br>customers <span style='color:#6C47FF'>24/7</span><br>effortlessly",
-    "hero-sub":"Charlia creates AI assistants that answer questions, book appointments and close sales — automatically, in any language.",
-    "hero-btn1":"See free demo","hero-btn2":"View pricing",
-    "stat1":"Non-stop support","stat2":"Fewer cancellations","stat3":"Languages available","stat4":"To go live",
-    "chat-name":"Charlia — Aesthetic Clinic Demo","chat-status":"Online now",
-    "msg1":"Hi, how much does botox cost?",
-    "msg2":"Hello! Botox starts from €200 😊 We have a free initial consultation for new patients. Would you like to book?",
-    "msg3":"Yes, I'm interested in Thursday afternoon",
-    "sec1-label":"How it works","sec1-h2":"3 steps to run<br>on autopilot","sec1-lead":"No technical knowledge needed. We handle everything so you just receive the clients.",
-    "step1-h":"Tell us about your business","step1-p":"You explain your services, prices and hours. We create a fully personalised agent with your brand name and style.",
-    "step2-h":"We set up your agent","step2-p":"In less than 48 hours your assistant is ready, tested and connected to your calendar. You just need to approve it.",
-    "step3-h":"You just serve clients","step3-p":"The agent answers, schedules and confirms. You receive clients ready to be attended, without missing any inquiry.",
-    "sec2-label":"What your agent does","sec2-h2":"Everything a modern<br>business needs","sec2-lead":"One agent that handles all customer interactions automatically.",
-    "sv1-h":"24/7 Support","sv1-p":"Answers queries any time of day, including holidays and weekends. Never miss another customer message.",
-    "sv2-h":"Automatic scheduling","sv2-p":"Clients choose their appointment directly from the chat. No calls, no waiting, no double bookings.",
-    "sv3-h":"Automatic reminders","sv3-p":"Sends WhatsApp reminders 12h before the appointment. Cancellations reduced by up to 40%.",
-    "sv4-h":"Multilingual","sv4-p":"Detects the client's language and replies in Spanish, English, German, French or whatever you need. Perfect for tourist areas.",
-    "sv5-h":"Sales closing","sv5-p":"Presents products, handles objections and guides the client to purchase or booking. Your best salesperson, non-stop.",
-    "sv6-h":"Human personality","sv6-p":"Your agent has a name, tone and style. Clients feel they're talking to a real person, not a robot.",
-    "sec3-label":"Industries","sec3-h2":"For any type<br>of business","sec3-lead":"We adapt each agent to the specific needs of your industry.",
-    "sec4-label":"Testimonials","sec4-h2":"What our clients<br>are saying","sec4-lead":"Real businesses already working with Charlia.",
-    "t1":"\"Since we got the Charlia agent, we never miss a query outside business hours. Appointments fill up on their own and the team can focus on serving clients.\"",
-    "t1-role":"Director, Aesthetic Clinic Marbella",
-    "t2":"\"Our international clients can now book a table in English and German. It has been a huge change for the business. I recommend it 100%.\"",
-    "t2-role":"Owner, La Brasa Restaurant",
-    "t3":"\"Cancellations dropped 40% since the agent started sending automatic reminders. An investment that pays for itself in the first month.\"",
-    "t3-role":"Manager, Alma Beauty Centre",
-    "sec5-label":"Pricing","sec5-h2":"Plans for every<br>type of business","sec5-lead":"No surprises. No fine print. Cancel anytime.",
-    "plan1-btn":"Start with Basic","plan2-btn":"Start with Professional","plan3-btn":"Start with Premium",
-    "sec6-label":"Frequently asked questions","sec6-h2":"Everything you need<br>to know","sec6-lead":"Have questions? Here are the most common ones.",
-    "faq1-q":"Do I need technical knowledge to use Charlia?","faq1-a":"No. We handle all the technical setup. You just tell us about your business and we do everything.",
-    "faq2-q":"How long does it take to get my agent ready?","faq2-a":"Less than 48 hours after you confirm your business details, your agent is ready to use.",
-    "faq3-q":"Does the agent replace my team?","faq3-a":"No, it complements them. The agent handles repetitive queries and appointment management so your team can focus on better serving clients.",
-    "faq4-q":"Can I update the agent's information whenever I want?","faq4-a":"Yes. If you change prices, add services or update hours, just let us know and we'll update it within 24 hours.",
-    "faq5-q":"What if I want to cancel?","faq5-a":"You can cancel the monthly maintenance whenever you want, with no commitment or penalties.",
-    "cta-h2":"Ready for your business<br>to run itself?","cta-p":"Request a free demo and see how an agent adapted to your industry works in less than 24 hours. No commitment.","cta-btn":"Request free demo",
-    "footer-link1":"How it works","footer-link2":"Industries","footer-link3":"Pricing","footer-link4":"FAQ","footer-link5":"Contact",
-    "footer-copy":"© 2025 Charlia · AI Agents for businesses · Marbella, Spain · carlosmatiascalvo@gmail.com"
-  }
+const T={
+  es:{"nav-como":"Cómo funciona","nav-sectores":"Sectores","nav-precios":"Precios","nav-contacto":"Contacto","nav-demo":"Solicitar demo","hero-badge":"✦ Agentes de IA para negocios","hero-h1":"Tu negocio atendiendo<br>clientes <span style='color:#6C47FF'>24 horas</span><br>sin esfuerzo","hero-sub":"Charlia crea asistentes de inteligencia artificial que responden consultas, agendan citas y cierran ventas — de forma automática, en cualquier idioma.","hero-btn1":"Ver demo gratuita","hero-btn2":"Ver precios","stat1":"Atención sin parar","stat2":"Menos cancelaciones","stat3":"Idiomas disponibles","stat4":"Para estar en marcha","chat-name":"Charlia — Clínica Estética Demo","chat-status":"En línea ahora","msg1":"Hola, ¿cuánto cuesta el botox?","msg2":"¡Hola! El botox está desde 200€ 😊 Tenemos consulta inicial gratuita. ¿Te gustaría reservar?","msg3":"Sí, me interesa el jueves","sec1-label":"Cómo funciona","sec1-h2":"En 3 pasos tu negocio<br>trabaja solo","sec1-lead":"Sin complicaciones técnicas. Nosotros lo configuramos todo y tú solo recibes los clientes.","step1-h":"Cuéntanos tu negocio","step1-p":"Nos explicas tus servicios, precios y horarios. Con eso creamos un agente totalmente personalizado.","step2-h":"Configuramos tu agente","step2-p":"En menos de 48 horas tienes tu asistente listo y conectado a tu agenda.","step3-h":"Tú solo atiendes","step3-p":"El agente responde, agenda y confirma. Tú recibes los clientes listos para ser atendidos.","sec2-label":"Qué hace tu agente","sec2-h2":"Todo lo que necesita<br>un negocio moderno","sec2-lead":"Un único agente que cubre toda la atención al cliente de forma automática.","sv1-h":"Atención 24/7","sv1-p":"Responde consultas en cualquier momento del día, incluso festivos y fines de semana.","sv2-h":"Agenda automática","sv2-p":"El cliente elige su cita directamente desde el chat. Sin llamadas, sin esperas.","sv3-h":"Recordatorios automáticos","sv3-p":"Envía recordatorios por WhatsApp 12h antes. Las cancelaciones bajan hasta un 40%.","sv4-h":"Multiidioma","sv4-p":"Detecta el idioma del cliente y responde en español, inglés, alemán o el que necesites.","sv5-h":"Cierre de ventas","sv5-p":"Presenta productos, resuelve objeciones y guía al cliente hasta la compra o reserva.","sv6-h":"Personalidad humana","sv6-p":"Tu agente tiene nombre, tono y estilo propio. Los clientes sienten que hablan con una persona.","sec3-label":"Sectores","sec3-h2":"Para cualquier tipo<br>de negocio","sec3-lead":"Adaptamos cada agente a las necesidades específicas de tu sector.","sec4-label":"Testimonios","sec4-h2":"Lo que dicen<br>nuestros clientes","sec4-lead":"Negocios reales que ya trabajan con Charlia.","t1":"\"Desde que tenemos el agente de Charlia, no perdemos ninguna consulta fuera de horario. Las citas se llenan solas.\"","t1-role":"Directora, Clínica Estética Marbella","t2":"\"Nuestros clientes internacionales reservan en inglés y alemán. Ha sido un cambio enorme.\"","t2-role":"Propietario, Restaurante La Brasa","t3":"\"Las cancelaciones bajaron un 40%. Una inversión que se paga sola en el primer mes.\"","t3-role":"Gerente, Centro de Belleza Alma","sec5-label":"Precios","sec5-h2":"Dos planes para<br>crecer sin límites","sec5-lead":"Sin permanencia. Sin sorpresas. Cancela cuando quieras.","plan1-name":"Profesional","plan1-desc":"Para negocios que quieren automatizar y crecer","plan1-per":"/mes","plan1-setup":"+ 497€ setup único al inicio","pf1-1":"Agente IA personalizado con tu marca","pf1-2":"Servicios y productos ilimitados","pf1-3":"Agenda automática de citas","pf1-4":"Recordatorios por WhatsApp y email","pf1-5":"Hasta 3 idiomas","pf1-6":"Personalidad humana avanzada","pf1-7":"Informe mensual de consultas","pf1-8":"Soporte por WhatsApp","plan1-btn":"Empezar ahora","plan2-badge":"Más completo","plan2-name":"Premium","plan2-desc":"Para negocios que quieren la solución completa","plan2-per":"/mes","plan2-setup":"+ 897€ setup único al inicio","pf2-1":"Todo lo del plan Profesional","pf2-2":"Integración en tu página web","pf2-3":"2 agentes distintos configurados","pf2-4":"Idiomas ilimitados","pf2-5":"Integración con Instagram DMs","pf2-6":"CRM básico de clientes","pf2-7":"Reunión mensual de seguimiento","pf2-8":"Prioridad en soporte 24h","plan2-btn":"Empezar ahora","sec6-label":"Preguntas frecuentes","sec6-h2":"Todo lo que necesitas<br>saber","sec6-lead":"¿Tienes dudas? Aquí respondemos las más comunes.","faq1-q":"¿Necesito conocimientos técnicos?","faq1-a":"No. Nosotros nos encargamos de todo en menos de 48 horas.","faq2-q":"¿Cuánto tarda en estar listo?","faq2-a":"En menos de 48 horas desde que confirmas los datos de tu negocio.","faq3-q":"¿El agente reemplaza a mi equipo?","faq3-a":"No, lo complementa. Se encarga de las consultas repetitivas para que tu equipo atienda mejor.","faq4-q":"¿Puedo cambiar la información cuando quiera?","faq4-a":"Sí. Lo actualizamos en menos de 24 horas.","faq5-q":"¿Hay permanencia?","faq5-a":"No. Cancela cuando quieras, sin penalizaciones.","sec7-label":"Contacto","sec7-h2":"Hablemos sobre<br>tu negocio","sec7-p":"Escríbenos por WhatsApp o Instagram y te hacemos una demo personalizada en menos de 24 horas.","contact-wa":"WhatsApp Business","contact-ig":"Instagram","contact-em":"Email","cta-h2":"¿Listo para que tu negocio<br>trabaje solo?","cta-p":"Solicita una demo gratuita y ve cómo funciona en menos de 24 horas.","cta-btn-wa":"💬 Escribir por WhatsApp","cta-btn-email":"Solicitar demo gratuita","footer-link1":"Cómo funciona","footer-link2":"Sectores","footer-link3":"Precios","footer-link4":"FAQ","footer-link5":"Contacto","footer-copy":"© 2025 Charlia — Agentes de IA · Marbella, España · carlosmatiascalvo@gmail.com"},
+  en:{"nav-como":"How it works","nav-sectores":"Industries","nav-precios":"Pricing","nav-contacto":"Contact","nav-demo":"Get a demo","hero-badge":"✦ AI Agents for businesses","hero-h1":"Your business serving<br>customers <span style='color:#6C47FF'>24/7</span><br>effortlessly","hero-sub":"Charlia creates AI assistants that answer questions, book appointments and close sales — automatically, in any language.","hero-btn1":"See free demo","hero-btn2":"View pricing","stat1":"Non-stop support","stat2":"Fewer cancellations","stat3":"Languages available","stat4":"To go live","chat-name":"Charlia — Aesthetic Clinic Demo","chat-status":"Online now","msg1":"Hi, how much does botox cost?","msg2":"Hello! Botox starts from €200 😊 We offer a free initial consultation. Would you like to book?","msg3":"Yes, Thursday works for me","sec1-label":"How it works","sec1-h2":"3 steps to run<br>on autopilot","sec1-lead":"No technical knowledge needed. We handle everything so you just receive the clients.","step1-h":"Tell us about your business","step1-p":"You explain your services, prices and hours. We create a fully personalised agent with your brand.","step2-h":"We set up your agent","step2-p":"In less than 48 hours your assistant is ready, tested and connected to your calendar.","step3-h":"You just serve clients","step3-p":"The agent answers, schedules and confirms. You receive clients ready to be attended.","sec2-label":"What your agent does","sec2-h2":"Everything a modern<br>business needs","sec2-lead":"One agent that handles all customer interactions automatically.","sv1-h":"24/7 Support","sv1-p":"Answers queries any time of day, including holidays and weekends.","sv2-h":"Automatic scheduling","sv2-p":"Clients choose their appointment directly from the chat. No calls, no waiting.","sv3-h":"Automatic reminders","sv3-p":"Sends WhatsApp reminders 12h before appointments. Cancellations drop by up to 40%.","sv4-h":"Multilingual","sv4-p":"Detects the client's language and replies in Spanish, English, German or whatever you need.","sv5-h":"Sales closing","sv5-p":"Presents products, handles objections and guides the client to purchase or booking.","sv6-h":"Human personality","sv6-p":"Your agent has a name, tone and style. Clients feel they're talking to a real person.","sec3-label":"Industries","sec3-h2":"For any type<br>of business","sec3-lead":"We adapt each agent to the specific needs of your industry.","sec4-label":"Testimonials","sec4-h2":"What our clients<br>are saying","sec4-lead":"Real businesses already working with Charlia.","t1":"\"Since getting Charlia, we never miss a query outside business hours. Appointments fill up on their own.\"","t1-role":"Director, Aesthetic Clinic Marbella","t2":"\"Our international clients now book in English and German. It has been a huge change.\"","t2-role":"Owner, La Brasa Restaurant","t3":"\"Cancellations dropped 40%. It pays for itself in the first month.\"","t3-role":"Manager, Alma Beauty Centre","sec5-label":"Pricing","sec5-h2":"Two plans to<br>grow without limits","sec5-lead":"No lock-in. No surprises. Cancel anytime.","plan1-name":"Professional","plan1-desc":"For businesses ready to automate and grow","plan1-per":"/month","plan1-setup":"+ €497 one-time setup fee","pf1-1":"Personalised AI agent with your brand","pf1-2":"Unlimited services and products","pf1-3":"Automatic appointment booking","pf1-4":"WhatsApp and email reminders","pf1-5":"Up to 3 languages","pf1-6":"Advanced human personality","pf1-7":"Monthly consultation report","pf1-8":"WhatsApp support","plan1-btn":"Get started","plan2-badge":"Most complete","plan2-name":"Premium","plan2-desc":"For businesses that want the full solution","plan2-per":"/month","plan2-setup":"+ €897 one-time setup fee","pf2-1":"Everything in Professional","pf2-2":"Integration on your website","pf2-3":"2 different agents configured","pf2-4":"Unlimited languages","pf2-5":"Instagram DM integration","pf2-6":"Basic client CRM","pf2-7":"Monthly strategy meeting","pf2-8":"Priority 24h support","plan2-btn":"Get started","sec6-label":"FAQ","sec6-h2":"Everything you need<br>to know","sec6-lead":"Have questions? Here are the most common ones.","faq1-q":"Do I need technical knowledge?","faq1-a":"No. We handle everything in less than 48 hours.","faq2-q":"How long does it take?","faq2-a":"Less than 48 hours after you confirm your business details.","faq3-q":"Does the agent replace my team?","faq3-a":"No, it complements them. It handles repetitive queries so your team serves clients better.","faq4-q":"Can I update the information anytime?","faq4-a":"Yes. We update it within 24 hours.","faq5-q":"Is there a lock-in contract?","faq5-a":"No. Cancel whenever you want, no penalties.","sec7-label":"Contact","sec7-h2":"Let's talk about<br>your business","sec7-p":"Message us on WhatsApp or Instagram and we'll give you a personalised demo in less than 24 hours.","contact-wa":"WhatsApp Business","contact-ig":"Instagram","contact-em":"Email","cta-h2":"Ready for your business<br>to run itself?","cta-p":"Request a free demo and see how it works in less than 24 hours.","cta-btn-wa":"💬 Message on WhatsApp","cta-btn-email":"Request free demo","footer-link1":"How it works","footer-link2":"Industries","footer-link3":"Pricing","footer-link4":"FAQ","footer-link5":"Contact","footer-copy":"© 2025 Charlia — AI Agents · Marbella, Spain · carlosmatiascalvo@gmail.com"}
 };
-
-let lang = 'es';
-
-function applyLang(l) {
-  lang = l;
-  const d = T[l];
-  document.querySelectorAll('[data-i]').forEach(el => {
-    if(d[el.dataset.i] !== undefined) el.innerHTML = d[el.dataset.i];
-  });
-  document.getElementById('langBtn').textContent = l === 'es' ? 'EN' : 'ES';
-  document.documentElement.lang = l;
-}
-
-document.getElementById('langBtn').addEventListener('click', () => applyLang(lang === 'es' ? 'en' : 'es'));
+let lang='es';
+function applyLang(l){lang=l;const d=T[l];document.querySelectorAll('[data-i]').forEach(el=>{if(d[el.dataset.i]!==undefined)el.innerHTML=d[el.dataset.i];});document.getElementById('langBtn').textContent=l==='es'?'EN':'ES';document.documentElement.lang=l;}
+document.getElementById('langBtn').addEventListener('click',()=>applyLang(lang==='es'?'en':'es'));
 </script>
 </body>
 </html>
